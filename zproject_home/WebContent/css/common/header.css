@@ -1,0 +1,229 @@
+@CHARSET "UTF-8";
+
+*{
+	margin: 0px;
+}
+
+#topHeader{
+	width: 100%;
+	height: 30px;
+	background-color: black;
+	
+}
+
+#topLeft {
+	float: left;
+	height: 30px;
+}
+#topCenter{
+	width: 80%;
+	height: 30px;
+	margin: 0 auto;
+	
+}
+
+#headWrite{
+	font-size: 12px;	
+	color: white;
+	position: relative;
+	top: 5px;
+	left: 5%;
+}
+#dropBox{
+	float: right;
+	
+}
+
+#dropBox > ul{
+	margin-top: 2%;
+	margin-bottom: 0px;
+	color: white;
+}
+
+#dropBox > ul li{
+	display: inline;
+	padding: 0px 5px;
+	font-size: 11px;
+}
+
+
+#topMenu{
+	width: 80%;
+	height: 100px;
+	margin: 0 auto;
+}
+
+#topLogoLeft{
+	float: left;	
+}
+
+.logo{
+	margin: 14%;
+}
+
+#topContent{
+	padding-top: 1.5%;
+}
+
+
+
+#searchGroup{
+	float: right;
+	width: 258px;
+	height: 32px;
+	margin-top: 1%;
+	background-color: #eaeaea;
+}
+
+#search{
+	float: left;
+    margin-left: 10px;
+    background-color: transparent;
+    border: none;
+    height: 32px;
+    width: 216px;
+    padding-left: 1%;
+    outline-style: none;
+   	color: #d50c0c;
+}
+
+#topMenuCenterFooter{
+	float: right;
+	margin-right: 5%;
+	padding-top: 1%;
+}
+
+#category2 > ul li{
+	display: inline;
+	list-style: disc;
+	padding: 0px 5px;
+	font-size: 20px;
+}
+#dropBox2 > ul{
+	margin-top: 2%;
+	margin-bottom: 0px;
+	color: gray;
+}
+
+#dropBox2 > ul li{
+	display: inline;
+	padding: 0px 5px;
+	font-size: 20px;
+	
+}
+.dropdown-menu>li>a{
+	font-size: 15px;
+}
+
+.dropdown-toggle, .navbar-nav>li>a{
+	padding: 0%;
+	
+}
+
+}
+.menu2{
+	color: gray;
+}
+
+a.menu2:link{
+	color: gray;
+	text-decoration: none;
+}
+a.menu2:visited{
+	color: gray;
+	text-decoration: none;
+}
+a.menu2:hover{
+	color: black;
+	text-decoration: none;
+}
+
+a.menu:link{
+	color: black;
+	text-decoration: none;
+}
+a.menu:visited{
+	color: black;
+	text-decoration: none;
+}
+a.menu:hover{
+	color: gray;
+	text-decoration: none;
+}
+/* 클릭x */
+a.joinLink:link {
+    color: white;
+    text-decoration: none;
+}
+/* 클릭하고 난 뒤 */
+a.joinLink:visited {
+ 	color: white;
+    text-decoration: none;
+}
+/* 마우스오버 시 */
+a.joinLink:hover {
+	color: white;
+	text-decoration: none;
+}
+.menuNum{
+	font-family: cursive;
+}
+.font{
+
+	font-weight: bold;
+}
+
+
+.h4{
+	font-size:20px;
+}
+
+#body_icon{
+	text-align: center;	
+}
+.modal-header {
+    background: #fff;
+    border-bottom: 1px solid #e1e8ed;
+    border-radius: 6px 6px 0 0;
+    cursor: move;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.modal-title{
+	text-align: center;
+}
+
+#login_form{
+	text-align: center;
+}
+
+.LoginForm input {
+    width: 100%;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+.text-input{
+	width:38%;
+}
+
+.submit{
+	width:38%;
+	background-color: firebrick;
+	color:white;	
+}
+
+.signupLink{
+	color:firebrick !important;
+	text-align: center;
+	font-size:15px;
+	
+}
+
+#menu_font{
+	color:#6aa7cc;
+	padding-top:5%;
+	padding-left: 6%;
+	font-size: 14px;
+}

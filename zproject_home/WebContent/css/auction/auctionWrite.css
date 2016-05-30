@@ -1,0 +1,67 @@
+@CHARSET "UTF-8";
+
+#middleBox{
+	width: 80%;
+	margin: 0 auto;
+}
+
+#middleLeft, #middleRight{	
+	padding-bottom: 1.5%;
+}
+
+#line{
+	margin: 0px;
+	width: 20%;
+}
+
+a.path:link, a.path:visited, a.path:hover{
+	color: black;
+	text-decoration: none;
+	font-weight: 300;
+}
+
+table{
+	width: 100%;
+	
+	border-collapse: collapse;
+	border-spacing: 0px;
+	margin-bottom: 1.5%;
+}
+
+tr{
+	border-top: 1px solid #ddd;
+}
+
+td{
+	padding: 8px;
+}
+
+
+.pTitle{
+	width: 15%;
+	font-size: 15px;
+	font-weight: 700;
+}
+
+#writeImg{
+	margin-bottom: 1.5%;
+}
+
+.pContent{
+	width: 45%;
+}
+
+.write{
+	margin-top: 1.5%;
+	display: inline;
+}
+input[type=file]{
+	display: inline-block;
+}
+.imgs{
+	
+	width: 78%;
+}
+
+
+

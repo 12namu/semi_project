@@ -1,0 +1,125 @@
+select * from tab;
+
+
+
+맴버
+CREATE TABLE member
+(
+    id        VARCHAR2(255) primary key, 
+    pw        VARCHAR2(255), 
+    name      VARCHAR2(255),     
+    gender    VARCHAR2(255),     
+    birth1    VARCHAR2(255),     
+    birth2    VARCHAR2(255),     
+    birth3    VARCHAR2(255),     
+    mail1     VARCHAR2(255),     
+    mail2     VARCHAR2(255),     
+    phone1    VARCHAR2(255),     
+    phone2    VARCHAR2(255),     
+    phone3    VARCHAR2(255),   
+    checked     VARCHAR2(255)     
+)
+
+
+판매
+CREATE TABLE product
+(
+    num             NUMBER(8) primary key, 
+    id              VARCHAR2(255),      
+    title           VARCHAR2(255),      
+    contents        VARCHAR2(4000),     
+    imgs            VARCHAR2(255),      
+    category        VARCHAR2(255),      
+    name            VARCHAR2(255),      
+    pr              VARCHAR2(255),      
+    startprice      NUMBER(8),          
+    nowprice        NUMBER(8),          
+    instantprice    NUMBER(8),          
+    bidincrease     NUMBER(8),          
+    bidcount        NUMBER(8),          
+    daystart        date,               
+    day             date,               
+    reg_date        DATE,               
+    counts          NUMBER(8),          
+    state           NUMBER(1)        
+)
+
+ALTER TABLE product
+    ADD CONSTRAINT FK_product_id_member_id FOREIGN KEY (id)
+        REFERENCES member (id)
+
+        
+구매
+CREATE TABLE buy
+(
+    num      NUMBER(8),         
+    price    NUMBER(8),         
+    times     DATE,              
+    id       VARCHAR2(255)      
+)
+
+ALTER TABLE buy
+    ADD CONSTRAINT FK_buy_num_product_num FOREIGN KEY (num)
+        REFERENCES product (num)
+
+ALTER TABLE buy
+    ADD CONSTRAINT FK_buy_id_member_id FOREIGN KEY (id)
+        REFERENCES member (id)
+
+        
+결제
+CREATE TABLE paymant
+(
+    id          VARCHAR2(255)    primary key, 
+    coin        NUMBER(8),
+    reg_date    DATE
+)
+
+ALTER TABLE paymant
+    ADD CONSTRAINT FK_paymant_id_member_id FOREIGN KEY (id)
+        REFERENCES member (id)
+
+리뷰
+CREATE TABLE review
+(
+    num         NUMBER(8) primary key,
+    id          VARCHAR2(255),
+    title       VARCHAR2(255), 
+    contents    VARCHAR2(4000), 
+    img         VARCHAR2(255), 
+    counts       NUMBER(8), 
+    likes        NUMBER(8), 
+    reg_date    date
+)
+
+ALTER TABLE review
+    ADD CONSTRAINT FK_review_id_member_id FOREIGN KEY (id)
+        REFERENCES member (id)
+        
+        
+공지
+CREATE TABLE notice
+(
+    num         NUMBER(8) primary key,
+    id          VARCHAR2(255),
+    title       VARCHAR2(255), 
+    contents    VARCHAR2(4000), 
+    counts       NUMBER(8), 
+    reg_date    date 
+)
+        
+ALTER TABLE notice
+    ADD CONSTRAINT FK_notice_id_member_id FOREIGN KEY (id)
+        REFERENCES member (id)
+
+
+create sequence auction_seq
+	start with 1
+	increment by 1
+	nomaxvalue
+	nocache
+	nocycle
+	
+시퀀스 보기
+select * from seq
+        

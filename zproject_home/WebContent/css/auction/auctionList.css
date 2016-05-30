@@ -1,0 +1,124 @@
+@CHARSET "UTF-8";
+
+
+#middleBox {
+	width: 80%;
+	margin: 0 auto;	
+}
+
+#middleHeader {
+	height: 150px;
+}
+
+#middleLeft {
+	float: left;
+}
+
+#middleRight{
+	float: left;
+	width: 78.7%;
+	padding-left: 3%;
+	padding-top: 2%;
+}
+
+a.path:link, a.path:visited, a.path:hover{
+	color: black;
+	text-decoration: none;
+	font-weight: 300;
+}
+
+#line{
+	margin-top: 1%;
+}
+
+
+
+a.pathBoard:link, a.pathBoard:visited{
+	color: black;
+	text-decoration: none;
+	font-weight: 500;
+	font-size: 20px;
+}
+
+a.pathBoard:hover{
+	color: red;
+	text-decoration: none;
+	font-weight: 500;
+	font-size: 20px;	
+}
+
+#middleRightContent > p{
+	text-align: center;
+}
+
+.two{
+	margin-left: 30%;
+	margin-right: 30%;
+}
+
+#middleBox{
+	width: 80%;
+	margin: 0 auto;
+}
+
+#productTable{
+	width: 100%;
+	background-color: #f8f8f8;
+}
+
+#productTable > tbody > tr{
+	border: 1px dashed;
+	border-left: hidden;
+	border-right: hidden;
+}
+#productTable > tbody > tr > td{
+	height: 160px;
+}
+
+#pImg{
+	padding: 1%;
+	width: 20%;
+	height: 150px;
+	text-align: center;
+}
+#pImg > a > img{
+	width: 100%;
+	height: 100%;	
+	
+}
+
+#pInfo{
+	padding: 1%;
+	padding-left: 4%;
+	width: 55%;
+}
+#pInfo > div{
+	margin-top: 1%;
+	margin-bottom: 1%;
+}
+#pState{
+	padding: 1%;
+}
+
+#pState > div{
+	width: 100%;
+	height: 129px;
+	border-radius: 15px;
+	background-color: gainsboro;
+	padding: 10%;
+	padding-top: 15% !important;
+}
+
+
+#pCategory{
+	color: red;
+	
+}
+#pTitle{
+	color: black;		
+}
+
+.write{
+	margin: 1%;
+	margin-left: 92.7%;
+}

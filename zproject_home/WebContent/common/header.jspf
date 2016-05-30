@@ -1,0 +1,134 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<%@ include file="../common/bootstrap.jspf" %>
+<link rel="stylesheet" type="text/css" href="<%= application.getContextPath() %>/css/common/header.css">
+<link rel="stylesheet" type="text/css" href="<%= application.getContextPath() %>/css/common/footer.css">
+
+
+</head>
+<body>
+	<div id ="wrap">
+		<header id="header">
+			<div id="topBox">
+				<div id="topHeader">
+					<div id="topLeft">
+						<span id="headWrite">온라인 경매채널 / FreeMarket</span>
+					</div>
+		
+					<div id="topCenter">
+						<nav id="dropBox">
+						
+							<!--로그인 했을시-->
+							<c:if test="${sessionScope.member ne null}">
+								<ul>			
+					        		<li class="dropdown">
+					          		<a href="#" class="dropdown-toggle joinLink" data-toggle="dropdown">${sessionScope.member.id}님<b class="caret"></b></a>
+					          		
+					          		<ul class="dropdown-menu">
+					          		<div id="menu_font">
+					          		<li style="font-size:14px";>${sessionScope.member.name}님</li><br>
+					          		<li style="font-size:14px";>Bean :</li>
+					          		</div>
+					          		<hr style="1px gray solid">
+					            	<li><a href="<%=application.getContextPath() %>/sub/myPage/mainProcess.me?curPage=1">마이프리마켓</a></li>
+					            	<li><a href="<%=application.getContextPath() %>/sub/myPage/mywishProcess.me">MY WISH</a></li>
+					            	<li><a href="#">상품후기</a></li>
+					            	<li><a href="<%=application.getContextPath()%>/sub/myPage/myPage_myinfo.jsp">개인정보수정</a></li>
+					            	<li><a href="<%=application.getContextPath()%>/sub/member/logoutProcess.me">로그아웃</a></li>			            	
+					          		</ul>
+					          	
+					          		<li><span><a class="joinLink" href="<%=application.getContextPath() %>/sub/member/logoutProcess.me">로그아웃</a></span></li>
+									
+									</li>	
+					      		</ul>
+					      		</c:if>
+					      		
+					      		<!--로그인 안했을시-->
+					      		<c:if test="${sessionScope.member eq null}">
+					      		<ul>			
+					        		<li class="dropdown">
+					          		<li><span><a class="joinLink" href="#" data-toggle="modal" data-target="#myModal5">로그인</a> / <a class="joinLink" href="<%=application.getContextPath() %>/sub/member/joinAgree.jsp">회원가입</a></span></li>
+									
+									</li>	
+					      		</ul>
+					      		</c:if>
+					      		
+					      		
+					      		
+						</nav>	
+					</div>
+				</div>	
+				<div id="topContent">
+					<div id="topMenu">
+						<div id="topLogoLeft">
+							<a href="<%=application.getContextPath() %>/index.jsp"> <img src="<%= application.getContextPath()%>/img/common/top/logo.png"></a>
+						</div>
+						
+						<div id="topMenuCenter">
+							<div id="searchGroup">
+								<form action="<%=application.getContextPath()%>/sub/auction/auctionSearchList.ac?curPage=1" method="post">
+								
+								<input type="text" id="search" name="search">
+								<input type="image" src="<%= application.getContextPath()%>/img/common/top/btn_search.gif" id="headerSearch">
+								</form>
+							</div>
+						</div>
+						<div id="topMenuCenterFooter">
+							<nav id="category2">
+								<nav id="dropBox2">
+									<ul>
+									<li><a class="menu2" href="<%=application.getContextPath() %>/sub/auction/auctionList.ac?curPage=1&check=0">AUCTION LIST</a></li>
+						        	<li class="dropdown">
+						          	<a href="#" class="dropdown-toggle menu2" data-toggle="dropdown">COMMUNITY<b class="caret"></b></a>
+						          		<ul class="dropdown-menu">
+						            	
+						            	<li><a href="<%=application.getContextPath()%>/sub/review/reviewList.rw?curPage=1">리뷰게시판</a></li>
+						            	
+						          		</ul>
+						        	</li>
+						      	</ul>
+								</nav>
+							</nav>
+						</div>
+					</div>
+				</div>			
+			</div>
+			<hr>
+		</header>
+<!-- Modal -->
+<div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+<!--         <h4 class="modal-title" id="myModalLabel">Login</h4> -->
+      </div>
+      
+      <div class="modal-body">
+		<div id="body_icon">
+			<img src="<%=application.getContextPath() %>/img/common/top/logo.png">
+		</div>
+        <div id="body_form">
+        <form action="<%=application.getContextPath() %>/sub/member/loginProcess.me" method="post">
+  			<div id="login_form">
+  			<input type="text" class="text-input email-input js-signin-email id" name="id" placeholder="사용자 아이디"><br><br>
+  			<input type="password" class="text-input pw" id="pw" name="pw" placeholder="비밀번호"><br><br>
+  			<input type="submit" class="submit btn primary-btn js-submit" value="로그인">
+  			</div>      
+        </form>
+        </div>	
+      </div>
+      <div class="modal-footer">
+		 <a class="signupLink" href="<%=application.getContextPath() %>/sub/member/joinAgree.jsp">가입하기 »</a>
+
+      </div>
+      
+    </div>
+  </div>
+</div>

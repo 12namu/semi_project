@@ -1,0 +1,96 @@
+@CHARSET "UTF-8";
+
+#searchFilter{
+	width: 100%;
+	border-bottom: 4px solid #d50c0c;
+	padding: 2%;
+	margin-bottom: 5%;
+}
+
+
+
+#middleBox{
+	width: 80%;
+	margin: 0 auto;		
+}
+
+#searchWord{
+	padding-right: 1%;
+	font-size: 27px;	
+}
+
+#searchBtn{
+	vertical-align: top;
+	margin-top: 7px;
+}
+
+#searchResult{
+	position: relative;
+	left: 33%;
+	
+}
+
+#productTable{
+	width: 100%;
+	background-color: #f8f8f8;
+}
+
+#productTable > tbody > tr{
+	border: 1px dashed;
+	border-left: hidden;
+	border-right: hidden;
+}
+#productTable > tbody > tr > td{
+	height: 160px;
+}
+
+#pImg{
+	padding: 1%;
+	width: 20%;
+	height: 150px;
+	text-align: center;
+}
+#pImg > a > img{
+	width: 100%;
+	height: 100%;	
+	
+}
+
+#pInfo{
+	padding: 1%;
+	padding-left: 4%;
+	width: 55%;
+}
+#pInfo > div{
+	margin-top: 1%;
+	margin-bottom: 1%;
+}
+#pState{
+	padding: 1%;
+}
+
+#pState > div{
+	width: 100%;
+	height: 129px;
+	border-radius: 15px;
+	background-color: gainsboro;
+	padding: 10%;
+	padding-top: 15% !important;
+}
+
+
+#pCategory{
+	color: red;
+	
+}
+#pTitle{
+	color: black;		
+}
+
+#noword{
+	font-size: 30px;	
+}
+
+#nosearch{
+	margin: 5%;
+}
